@@ -1,0 +1,473 @@
+* {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* For ICONS */
+i {
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+}
+/* Header */
+
+header {
+    background: #fff;
+    height: 80px;
+    padding: 10px 2%;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+/* Left Part */
+.left-part .fas {
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+.left-part .fab {
+    font-size: 24px;
+    margin-right: 30px;
+    color: red;
+}
+
+
+.left-part span {
+    color: black;
+    font-weight: 600;
+    margin-left: 5px;
+
+}
+
+.center-part .search-bar {
+    border: 1px solid #d4d4d4;
+    margin-right: 20px;
+    width: 500px;
+    height: 35px;
+    border-radius: 2px;
+    outline: none;
+}
+
+.center-part .search-bar input {
+    width: 85%;
+    height: 100%;
+    border: 0px solid #d4d4d4;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 0 10px;
+    outline: none;
+}
+
+.center-part .search-bar .search-btn {
+    width: 15%;
+    height: 100%;
+    background: #f0f0f0;
+    height: 100%;
+    border: 0px solid #d4d4d4;
+    outline: none;
+    font-size: 20px;
+}
+
+.center-part .mic-icon {
+    font-size: 20px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 50%;
+}
+
+.right-part i {
+    font-size: 24px;
+    margin-right: 24px;
+}
+
+/* sidebar */
+.side-bar {
+    height: 100vh;
+    width: 15%;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    padding-top: 0px;
+    white-space: nowrap;
+    overflow-y: scroll;
+
+}
+
+.side-bar .menu-item {
+    padding: 8px;
+    margin: 1%;
+    list-style-type: none;
+}
+
+
+
+
+.side-bar i {
+    font-size: 22px;
+    width: 40px;
+    padding: 10px;
+}
+
+.side-bar .menu-item:hover {
+    background-color: #d4d4d4;
+    cursor: pointer;
+
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+    margin: 15px 0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 10px;
+}
+
+.side-bar .menu-item i {
+    margin-right: 30px;
+}
+
+.resize-sidebar {
+    width: 4%;
+}
+
+/* Page Content */
+
+.videos-container {
+    padding-left: 16%;
+    padding-top: 20px;
+    padding-right: 1%;
+    padding-bottom: 20px;;
+}
+
+.all-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 30px;
+    margin-top: 10px;
+    
+}
+
+.single-video .thumb {
+    width: 100%;
+    border-radius: 2%;
+}
+
+.single-video .flex-box img {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.single-video .flex-box {
+    align-items: flex-start;
+    margin-top: 5px;;
+}
+
+.video-details {
+    font-size: 14px;
+    color: #6a6a6a;
+}
+
+.video-details a {
+    font-weight: 600;
+    display: block;
+}
+
+.resize-videos-container {
+    padding-left: 5%;
+}
+
+/* Medi Queries */
+/* Lower then 800px */
+@media (max-width: 800px) {
+    /* Left Part */
+.left-part .fas {
+    font-size: 20px;
+    margin-right: 8px;
+    margin-left: 4px;
+}
+
+.left-part .fab {
+    font-size: 20px;
+}
+
+.center-part .search-bar {
+
+    width: fit-content;
+    margin-left: 5%;
+
+}
+
+.center-part .search-bar .search-btn {
+
+    font-size: 18px;
+    padding: 5px;
+}
+
+.center-part .mic-icon {
+    display: none;
+}
+
+.right-part i {
+    display: none;
+}
+
+.right-part .fa-user {
+    display: block;
+    font-size: 20px;
+    margin-right: 4px
+}
+
+.side-bar {
+    height: 100%;
+    width: 150px;
+  
+
+}
+
+/* .sidebar-show {
+       /* display: block; */
+       display: none;
+} */
+
+.side-bar .menu-item {
+    padding: 2px;
+}
+
+.side-bar .menu-item i {
+    margin-right: 12px;
+}
+
+.side-bar i {
+    font-size: 20px;
+    width: 20px;
+    padding: 5px;
+}
+
+.resize-sidebar{
+    width: 0;
+}
+
+.videos-container {
+    padding-left: 3%;
+}
+
+}
+
+/* Video Page */
+.for-video-page {
+    padding: 1%;
+}
+
+.two-parts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.running-video {
+    flex-basis: 66%;
+}
+
+.suggested-videos {
+    flex-basis: 32%;
+}
+
+.running-video video {
+    width: 100%;
+}
+
+.running-video .video-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.video-info p {
+    color: #6a6a6a;
+}
+
+.running-video .video-info i {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.running-video .video-info span {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.youtuber {
+    display: flex;
+    align-items: center;
+}
+
+.youtuber img {
+    border-radius: 50%;
+    width: 45px;
+    margin-right: 12px;
+}
+
+.youtuberp {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.youtuber span {
+    color: #6a6a6a
+}
+
+.youtuber div {
+    flex: 0.98;
+}
+
+.youtuber button {
+    background: red;
+    outline: 0;
+    border: 0;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.video-desc {
+    margin: 10px 0;
+    padding-left: 60px;
+    line-height: 25px;
+}
+
+.video-comments {
+    padding-left: 2%;;
+}
+
+.video-comments span{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.add-comments {
+    display: flex;
+    align-items: center;
+    margin: 30px 5px;
+}
+
+.add-comments img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.add-comments input {
+    width: 100%;
+    background: none;
+    font-size: 18px;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.other-comments {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.other-comments h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.other-comments h3 span{
+    font-size: 15px;
+    font-weight: 500;
+    color: #6a6a6a
+}
+
+.other-comments p {
+    font-size: 16px;
+    padding-top: 5px;
+    margin-right: 22px;; 
+}
+
+.other-comments img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.react-comments {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.react-comments i {
+    padding: 0 10px;
+}
+
+.react-comments span {
+    font-weight: 500;
+    padding: 0 10px;
+    
+}
+
+.single-suggested-video {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;;
+
+}
+
+.single-suggested-video img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.single-suggested-video .thumbnail {
+    flex-basis: 50%;
+}
+
+.single-suggested-video .video-details {
+    flex-basis: 49%;
+}
